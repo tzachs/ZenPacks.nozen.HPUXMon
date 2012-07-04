@@ -15,8 +15,10 @@ MULTIPLIER = {
 
 def parse_mem(command):
     try:
+    	#  The HP UX OS version is 11.23
         memory = command.split('=')[1].strip()
     except:
+    	# The HP UX OS version is 11.31
     	memory = command.split(':')[1].strip()
     return memory
 
