@@ -14,7 +14,10 @@ MULTIPLIER = {
 }
 
 def parse_mem(command):
-    memory = command.split('=')[1].strip()
+    try:
+        memory = command.split('=')[1].strip()
+    except:
+    	memory = command.split(':')[1].strip()
     return memory
 
 def parse_swap(command):
